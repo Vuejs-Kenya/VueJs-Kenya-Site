@@ -11,7 +11,7 @@ defineProps<{
 </script>
 
 <template>
-  <GridContainer>
+  <BaseContainer>
     <div class="relative">
       <div>
         <div class="h-[5rem]" />
@@ -62,5 +62,5 @@ defineProps<{
         </div>
       </div>
     </div>
-  </GridContainer>
+  </BaseContainer>
 </template>

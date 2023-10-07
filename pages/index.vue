@@ -37,5 +37,6 @@ const communityInformation = [
     <LandingPageSpeakersSection />
     <CardSpeakerCallToAction />
     <LandingPageTeamSection />
+    <LandingPageCommunityPartnersSection />
   </div>
 </template>

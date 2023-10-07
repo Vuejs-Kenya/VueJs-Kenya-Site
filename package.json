@@ -34,5 +34,8 @@
     "*.{.js,.jsx,ts,tsx,vue}": [
       "eslint --fix"
     ]
+  },
+  "dependencies": {
+    "@formkit/auto-animate": "^0.8.0"
   }
 }

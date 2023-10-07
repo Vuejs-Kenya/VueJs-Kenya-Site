@@ -17,6 +17,6 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   imports: {
-    dirs: ['./utils'],
+    dirs: ['./utils', './Types'],
   },
 })

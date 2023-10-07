@@ -38,9 +38,9 @@ const navLinks = [
 </script>
 
 <template>
-  <header>
+  <header class="sticky top-0 inset-0 z-50 w-full ">
     <nav
-      class="sticky top-0 inset-0 z-50 w-full border-b px-6 border-gray-900 border-transparent-white backdrop-blur-[12px] "
+      class="border-b px-6 border-gray-900 border-transparent-white backdrop-blur-[12px] "
     >
       <div class="relative flex flex-wrap items-center justify-between gap-6 py-4 md:gap-0">
         <input id="toggle_nav" aria-hidden="true" type="checkbox" name="toggle_nav" class="hidden peer">

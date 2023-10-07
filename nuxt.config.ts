@@ -16,4 +16,7 @@ export default defineNuxtConfig({
     viewer: true,
   },
   devtools: { enabled: true },
+  imports: {
+    dirs: ['./utils'],
+  },
 })

@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+		scroll-behavior: smooth;
+	}
+    body {
+        @apply font-Inter bg-black w-full min-h-screen relative
+    }
+}

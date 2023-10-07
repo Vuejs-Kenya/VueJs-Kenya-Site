@@ -40,5 +40,6 @@ const communityInformation = [
     <LandingPageCommunityPartnersSection />
     <LandingPageTicketSection />
     <LandingPageCommunitySection />
+    <LandingPageNewsLetterSection />
   </div>
 </template>

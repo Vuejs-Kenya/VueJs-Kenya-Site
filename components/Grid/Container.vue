@@ -1,5 +1,7 @@
 <template>
-  <main class="relative px-6 mx-auto max-w-7xl md:px-12 xl:px-6">
-    <slot />
-  </main>
+  <div class="grid w-full place-items-center">
+    <div class="grid grid-cols-2 gap-8 lg:grid-cols-3 md:gap-10">
+      <slot />
+    </div>
+  </div>
 </template>

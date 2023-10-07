@@ -185,7 +185,7 @@ const cardTransform = computed(() => {
           <div class="inline-block w-px h-4 bg-gray-500" role="separator" />
           <p class="flex items-center space-x-2 text-sm">
             <span class="text-gray-300">Hosted by VueJs Kenya</span>
-            <img src="../../assets/images/logo.png" alt="VueJs Logo" class="w-6 h-6 md:h-4 md:w-4">
+            <img src="/logo.png" alt="VueJs Logo" class="w-6 h-6 md:h-4 md:w-4">
           </p>
         </div>
       </div>

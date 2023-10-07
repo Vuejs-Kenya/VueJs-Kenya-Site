@@ -46,7 +46,7 @@ const navLinks = [
         <input id="toggle_nav" aria-hidden="true" type="checkbox" name="toggle_nav" class="hidden peer">
         <div class="relative top-0 z-50 flex justify-between w-full lg:w-max md:px-0">
           <NuxtLink to="/" class="flex items-center space-x-2">
-            <img src="../../assets/images/logo.png" alt="VueJs Logo" class="w-6 h-6 md:h-8 md:w-8">
+            <img src="/logo.png" alt="VueJs Logo" class="w-6 h-6 md:h-8 md:w-8">
             <span class="text-lg font-bold text-white md:text-xl">VueJs Kenya</span>
           </NuxtLink>
 

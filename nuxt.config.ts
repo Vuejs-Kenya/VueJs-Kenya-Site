@@ -15,6 +15,11 @@ export default defineNuxtConfig({
     injectPosition: 'last',
     viewer: true,
   },
+  app: {
+    head: {
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/logo.png' }],
+    },
+  },
   devtools: { enabled: true },
   imports: {
     dirs: ['./utils', './Types'],

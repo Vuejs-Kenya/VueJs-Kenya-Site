@@ -15,7 +15,7 @@ const team = [
     title: 'Co-founder of VueJs Kenya',
     githubURL: 'https://github.com/lennykamande',
     twitterURL: 'https://twitter.com/lennymanyeki',
-    imageURL: 'https://github.com/lennykamande.png',
+    imageURL: 'https://pbs.twimg.com/profile_images/1186670731452735489/upoV3xXv_400x400.jpg',
   },
 
   {

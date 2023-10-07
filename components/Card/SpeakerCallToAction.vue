@@ -10,11 +10,13 @@
           <img
             src="https://nuxtnation.com/images/nn-bg-right.svg"
             class="hidden object-cover h-48 cursor-pointer lg:block"
+            alt="Nuxt Svg"
           >
 
           <img
             src="https://nuxtnation.com/images/nn-bg-right.svg"
             class="cursor-pointer lg:hidden"
+            alt="Nuxt Svg"
           >
         </div>
         <div class="relative z-10 grid h-full place-items-center">
@@ -32,11 +34,13 @@
           <img
             src="https://nuxtnation.com/images/nn-bg-right.svg"
             class="hidden object-cover h-48 cursor-pointer lg:block"
+            alt="Nuxt Svg"
           >
 
           <img
             src="https://nuxtnation.com/images/nn-bg-right.svg"
             class="cursor-pointer lg:hidden"
+            alt="Nuxt Svg"
           >
         </div>
       </BaseCard>

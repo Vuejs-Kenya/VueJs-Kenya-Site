@@ -28,15 +28,22 @@ const communityInformation = [
     content: 'We believe in the power of knowledge sharing. Our community members are passionate about teaching and learning from one another. ',
   },
 ]
+
+useSeoMeta({
+  title: 'VueJs Kenya',
+  ogTitle: 'VueJs Kenya',
+  description: 'A community of Vue developers committed to promoting the use of Vue.js and other cutting-edge technologies in Kenya, through regular meetups, workshops, hackathons, and other events.',
+  ogDescription: 'A community of Vue developers committed to promoting the use of Vue.js and other cutting-edge technologies in Kenya, through regular meetups, workshops, hackathons, and other events.',
+})
 </script>
 
 <template>
   <div class="space-y-10 md:space-y-20">
     <LandingPageHeroSection />
     <LandingPageAboutSection :community-information="communityInformation" />
-    <LandingPageSpeakersSection />
+    <LazyLandingPageSpeakersSection />
     <CardSpeakerCallToAction />
-    <LandingPageTeamSection />
+    <LazyLandingPageTeamSection />
     <LandingPageCommunityPartnersSection />
     <LandingPageTicketSection />
     <LandingPageCommunitySection />

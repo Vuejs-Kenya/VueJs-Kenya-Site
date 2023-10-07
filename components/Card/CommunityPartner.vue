@@ -18,21 +18,21 @@ defineProps<{
         v-for="{ id, partner, icon, link } in partners" :key="id"
         class="row-span-1 p-4 cursor-pointer backdrop-blur-[12px] bg-green-800 hover:bg-green-900 transition-all duration-200 ease-in bg-opacity-40 border-2 border-green-500 rounded-lg"
       >
-        <div class="grid w-full h-full place-items-center">
-          <div class="grid space-y-4 place-items-center">
-            <div>
-              <NuxtLink :to="link" target="_blank">
+        <NuxtLink :to="link" target="_blank">
+          <div class="grid w-full h-full place-items-center">
+            <div class="grid space-y-4 place-items-center">
+              <div>
                 <Icon :name="icon" class="text-5xl text-white" />
-              </NuxtLink>
-            </div>
+              </div>
 
-            <div>
-              <h1 class="text-2xl text-white">
-                {{ partner }}
-              </h1>
+              <div>
+                <h1 class="text-2xl text-white">
+                  {{ partner }}
+                </h1>
+              </div>
             </div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </div>
 

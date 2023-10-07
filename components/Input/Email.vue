@@ -3,10 +3,6 @@ const prop = defineProps<{
   section: string
 }>()
 
-function classNames(...values: string[]): string {
-  return values.filter(Boolean).join(' ')
-}
-
 const inputClass = computed(() => {
   return classNames(
     prop.section === 'hero' ? 'bg-black border border-slate-800' : 'bg-[#181818] border border-[#181818]',

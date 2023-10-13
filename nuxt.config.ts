@@ -1,6 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@vueuse/nuxt', 'nuxt-icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@vueuse/nuxt', 'nuxt-icon', '@nuxt/content'],
+  extends: [
+    '@nuxt-themes/elements',
+    '@nuxt-themes/typography',
+  ],
   googleFonts: {
     families: {
       Inter: true,
@@ -14,6 +18,23 @@ export default defineNuxtConfig({
     config: {},
     injectPosition: 'last',
     viewer: true,
+  },
+  content: {
+    highlight: {
+      theme: {
+        dark: 'one-dark-pro',
+        default: 'one-dark-pro',
+      },
+    },
+    markdown: {
+      // Object syntax can be used to override default options
+      remarkPlugins: {
+        // Override remark-emoji options
+        'remark-emoji': {
+          emoticon: true,
+        },
+      },
+    },
   },
   app: {
     head: {

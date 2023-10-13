@@ -32,13 +32,13 @@ const navLinks = [
   {
     id: 6,
     name: 'Blog',
-    path: '/',
+    path: '/blog',
   },
 ]
 </script>
 
 <template>
-  <header class="sticky top-0 inset-0 z-50 w-full ">
+  <header class="sticky inset-0 top-0 z-50 w-full ">
     <nav
       class="border-b px-6 border-gray-900 border-transparent-white backdrop-blur-[12px] "
     >

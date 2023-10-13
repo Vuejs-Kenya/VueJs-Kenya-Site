@@ -10,6 +10,11 @@ export default defineNuxtConfig({
       Inter: true,
     },
   },
+  runtimeConfig: {
+    mailchimp_api_key: '',
+    mailchimp_server_key: '',
+    mailchimp_audience_id: '',
+  },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',

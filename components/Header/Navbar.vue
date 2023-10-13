@@ -3,30 +3,30 @@ const navLinks = [
   {
     id: 1,
     name: 'Workshops',
-    path: '/',
+    path: '#',
   },
   {
     id: 2,
     name: 'Swags',
-    path: '/',
+    path: '#',
   },
 
   {
     id: 3,
     name: 'Speakers',
-    path: '/',
+    path: '#',
   },
 
   {
     id: 4,
     name: 'Partners',
-    path: '/',
+    path: '#',
   },
 
   {
     id: 5,
     name: 'Sponsors',
-    path: '/',
+    path: '#',
   },
 
   {
@@ -75,7 +75,7 @@ const navLinks = [
           <div class="w-full lg:pr-4 lg:w-auto lg:pt-0">
             <ul class="flex flex-col gap-6 font-medium tracking-wide text-white lg:text-sm lg:flex-row lg:gap-0">
               <li v-for="{ id, name, path } in navLinks" :key="id" class="pb-3 border-b border-gray-800 lg:border-none lg:pb-0">
-                <NuxtLink :to="path" class="transition-all duration-200 ease-in md:px-4 hover:text-green-500">
+                <NuxtLink :to="path" :class="{ 'text-green-500': path === $route.fullPath }" class="transition-all duration-200 ease-in md:px-4 hover:text-green-500">
                   {{ name }}
                 </NuxtLink>
               </li>

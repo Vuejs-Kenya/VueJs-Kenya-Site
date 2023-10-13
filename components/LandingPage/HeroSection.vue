@@ -1,3 +1,32 @@
+<script setup lang="ts">
+const userEmailAddress = ref('')
+
+const { $toast } = useNuxtApp()
+const loading = ref(false)
+async function handleSubscribe() {
+  loading.value = true
+  const { data, error } = await useFetch('/api/subscribe', {
+    method: 'POST',
+    body: {
+      email: userEmailAddress.value,
+    },
+  })
+
+  if (data.value?.status === 'subscribed') {
+    $toast.success('Thank you for joining our newsletter!')
+    userEmailAddress.value = ''
+    loading.value = false
+  }
+  else {
+    if (error.value?.statusCode === 400 || 500) {
+      userEmailAddress.value = ''
+      loading.value = false
+      $toast.error('OOPS! An error occurred. Please try again!')
+    }
+  }
+}
+</script>
+
 <template>
   <BaseContainer>
     <section class="w-full mt-20 lg:mt-0">
@@ -16,9 +45,7 @@
           <div class="relative inline-flex items-center mx-auto align-middle">
             <div class="space-y-4 text-center">
               <h1 class="block text-3xl font-bold text-white sm:text-4xl lg:text-6xl lg:leading-tight">
-                A community of <span class="text-green-500">Vue</span> developers <br
-                  class="hidden lg:block"
-                >
+                A community of <span class="text-green-500">Vue</span> developers <br class="hidden lg:block">
                 supercharging the web
               </h1>
               <p class="max-w-xl mx-auto text-base leading-relaxed text-gray-500">
@@ -30,8 +57,8 @@
         </div>
         <div class="grid place-items-center">
           <div class="grid items-center space-x-3 space-y-4 place-items-center md:space-y-0 md:flex">
-            <InputEmail section="hero" />
-            <ButtonEmail label="Join" />
+            <InputEmail id="userEmailAddress" v-model="userEmailAddress" name="userEmailAddress" section="hero" />
+            <ButtonEmail :loading="loading" label="Join" @click="handleSubscribe" />
           </div>
         </div>
       </div>

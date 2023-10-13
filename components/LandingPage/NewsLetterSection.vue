@@ -1,5 +1,30 @@
 <script setup lang='ts'>
+const userEmailAddress = ref('')
 
+const { $toast } = useNuxtApp()
+const loading = ref(false)
+async function handleSubscribe() {
+  loading.value = true
+  const { data, error } = await useFetch('/api/subscribe', {
+    method: 'POST',
+    body: {
+      email: userEmailAddress.value,
+    },
+  })
+
+  if (data.value?.status === 'subscribed') {
+    $toast.success('Thank you for joining our newsletter!')
+    userEmailAddress.value = ''
+    loading.value = false
+  }
+  else {
+    if (error.value?.statusCode === 400 || 500) {
+      userEmailAddress.value = ''
+      loading.value = false
+      $toast.error('OOPS! An error occurred. Please try again!')
+    }
+  }
+}
 </script>
 
 <template>
@@ -23,8 +48,8 @@
           </div>
 
           <div class="grid space-y-3 place-items-center md:space-y-0 md:space-x-3 md:items-center md:flex">
-            <InputEmail section="newsletter" />
-            <ButtonEmail label="Subscribe" />
+            <InputEmail id="userEmailAddress" v-model="userEmailAddress" name="userEmailAddress" section="footer" />
+            <ButtonEmail :loading="loading" label="Join" @click="handleSubscribe" />
           </div>
 
           <p class="max-w-[200px] text-[#CCCCCC] text-sm text-center md:max-w-xs">

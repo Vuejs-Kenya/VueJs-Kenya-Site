@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 defineProps<{
   label: string
+  loading: boolean
 }>()
 </script>
 
@@ -14,7 +15,10 @@ defineProps<{
     <span
       class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"
     />
-    <span class="relative z-20 flex items-center text-sm">
+    <span v-if="loading" class="relative z-20 flex items-center text-sm">
+      <Icon name="ph:spinner" class="text-xl text-white animate-spin" />
+    </span>
+    <span v-else class="relative z-20 flex items-center text-sm">
       {{ label }}
     </span>
   </div>

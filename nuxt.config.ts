@@ -10,6 +10,9 @@ export default defineNuxtConfig({
       Inter: true,
     },
   },
+  experimental: {
+    viewTransition: true,
+  },
   runtimeConfig: {
     mailchimp_api_key: '',
     mailchimp_server_key: '',

@@ -14,12 +14,14 @@ function readingTime(content: any) {
 
   return minutes
 }
+
+const active = useState()
 </script>
 
 <template>
   <div class="grid w-full grid-cols-1 gap-4 px-1 py-1 space-y-8 md:space-y-0 md:grid-cols-2 xl:grid-cols-3">
     <div v-for="(post, index) in props.data " :key="post._path" :class="[index === 0 && 'xl:col-span-3']">
-      <NuxtLink :to="post._path" class="cursor-pointer">
+      <NuxtLink :to="post._path" class="cursor-pointer" @click="active = post._path">
         <div class="px-0 md:px-4">
           <div
             :class="[index === 0 ? 'xl:grid xl:grid-cols-2 xl:w-full' : ' flex flex-col']"
@@ -27,8 +29,10 @@ function readingTime(content: any) {
           >
             <div>
               <img
-                :class="[index === 0 ? 'xl:h-72 hover:scale-none' : 'hover:scale-105']"
-                class="object-cover w-full transition-all duration-200 ease-in aspect-video rounded-xl"
+                :class="[
+                  index === 0 ? 'xl:h-72 hover:scale-none' : 'hover:scale-105',
+                  { active: active === post._path },
+                ]" class="object-cover w-full transition-all duration-200 ease-in aspect-video rounded-xl"
                 :src="post.imageUrl" alt="Image Description"
               >
             </div>
@@ -69,3 +73,10 @@ function readingTime(content: any) {
     </div>
   </div>
 </template>
+
+<style scoped>
+img.active {
+  view-transition-name: selected-film;
+  contain: layout;
+}
+</style>

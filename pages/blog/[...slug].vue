@@ -2,16 +2,31 @@
 definePageMeta({
   layout: 'blog',
 })
+const route = useRoute()
+const { data: post } = await useAsyncData(`article-${route.path}`, () => queryContent('/blog')
+  .where({ _path: route.path })
+  .findOne())
 </script>
 
 <template>
   <div class="max-w-4xl mx-auto">
-    <NuxtLink to="/blog" class="flex items-center space-x-2 cursor-pointer group">
-      <Icon name="material-symbols:arrow-insert-rounded" class="text-2xl text-gray-200 transition-all duration-200 ease-in group-hover:text-white" />
-      <p class="text-gray-200 transition-all duration-200 ease-in group-hover:text-white">
-        back
-      </p>
-    </NuxtLink>
+    <div class="space-y-6">
+      <NuxtLink to="/blog" class="flex items-center pl-4 space-x-2 cursor-pointer md:pl-0 group">
+        <Icon
+          name="material-symbols:arrow-insert-rounded"
+          class="text-2xl text-gray-200 transition-all duration-200 ease-in group-hover:text-white"
+        />
+        <p class="text-gray-200 transition-all duration-200 ease-in group-hover:text-white">
+          back
+        </p>
+      </NuxtLink>
+      <div class="grid px-4 place-items-center md:px-0">
+        <img
+          class="object-cover w-full aspect-video rounded-xl" :src="post?.imageUrl"
+          :alt="post?.title"
+        >
+      </div>
+    </div>
     <ContentDoc class="max-w-2xl px-4 md:px-6 lg:px-0 md:max-w-4xl dark:text-white">
       <template #not-found>
         <div class="grid w-full min-h-screen place-items-center">
@@ -20,7 +35,10 @@ definePageMeta({
               OOPS! You shouldn't be here
             </h1>
             <p class="text-center dark:text-zinc-200">
-              Let me take you back to <NuxtLink to="/" class="underline transition-all duration-200 hover:text-purple-500">
+              Let me take you back to <NuxtLink
+                to="/"
+                class="underline transition-all duration-200 hover:text-purple-500"
+              >
                 safety
               </NuxtLink>
             </p>
@@ -30,3 +48,9 @@ definePageMeta({
     </ContentDoc>
   </div>
 </template>
+
+<style scoped>
+img {
+  view-transition-name: selected-film;
+}
+</style>

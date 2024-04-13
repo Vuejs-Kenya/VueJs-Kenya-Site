@@ -7,6 +7,6 @@
 		scroll-behavior: smooth;
 	}
     body {
-        @apply font-Inter bg-black w-full min-h-screen relative
+        @apply font-Inter w-full min-h-screen relative
     }
 }

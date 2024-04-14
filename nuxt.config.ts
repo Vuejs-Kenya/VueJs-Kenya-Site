@@ -1,6 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@vueuse/nuxt', 'nuxt-icon', 'shadcn-nuxt', '@nuxtjs/color-mode'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    '@vueuse/nuxt',
+    'nuxt-icon',
+    '@nuxtjs/color-mode',
+    'shadcn-nuxt',
+  ],
   colorMode: {
     classSuffix: '',
   },

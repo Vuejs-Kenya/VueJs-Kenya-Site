@@ -117,7 +117,7 @@ onMounted(() => {
               <NuxtLink :to="link" class="cursor-pointer hover:text-green-500">
                 <Icon
                   :name="icon"
-                  class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
+                  class="w-5 h-5 text-gray-500 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
                 />
               </NuxtLink>
             </li>

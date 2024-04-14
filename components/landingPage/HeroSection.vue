@@ -52,7 +52,10 @@ async function handleSubscribe() {
         </div>
         <div class="grid place-items-center">
           <div class="grid items-center space-x-3 space-y-4 place-items-center md:space-y-0 md:flex">
-            <UIInput v-model="userEmailAddress" placeholder="Email Address" class="w-72" />
+            <UIInput
+              v-model="userEmailAddress" placeholder="Email Address"
+              class="w-72 border border-gray-300 dark:border-gray-700"
+            />
             <!-- <InputEmailComponent id="userEmailAddress" v-model="userEmailAddress" name="userEmailAddress"
               section="hero" /> -->
             <ButtonEmailComponent :loading="loading" label="Join" @click="handleSubscribe" />

@@ -48,11 +48,11 @@ const colorMode = useColorMode()
         </ClientOnly>
       </div>
 
-      <div class="flex flex-col md:flex-row md:flex md:justify-between">
-        <div class="order-last flex justify-center w-full pt-4 md:order-first md:pt-0 md:justify-start">
+      <div class="flex flex-col w-full space-y-3 sm:space-y-0 sm:flex-row sm:flex sm:justify-between">
+        <div class="flex items-center justify-center w-full sm:justify-start">
           <small class="dark:text-white"> &copy; {{ date }} VueJs Kenya. </small>
         </div>
-        <div class="flex order-first md:order-last w-full justify-center sm:justify-end">
+        <div class="flex justify-center">
           <FooterIconComponent v-for="{ id, link, icon } in socialIcons" :key="id" :link="link" :icon="icon" />
         </div>
       </div>

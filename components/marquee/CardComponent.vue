@@ -45,13 +45,19 @@ const props = defineProps<{
     <div class="flex items-center space-x-3">
       <button type="button">
         <NuxtLink :to="props.githubURL">
-          <Icon name="line-md:github" class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-300" />
+          <Icon
+            name="line-md:github"
+            class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
+          />
         </NuxtLink>
       </button>
 
       <button type="button">
         <NuxtLink :to="props.twitterURL">
-          <Icon name="line-md:twitter-x" class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-300" />
+          <Icon
+            name="line-md:twitter-x"
+            class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
+          />
         </NuxtLink>
       </button>
     </div>

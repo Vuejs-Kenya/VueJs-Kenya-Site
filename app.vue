@@ -1,3 +1,6 @@
 <template>
-  <div />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
+  <UIToaster />
 </template>

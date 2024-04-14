@@ -24,7 +24,25 @@
     "eslint": "^8.57.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "simple-git-hooks": "^2.11.1"
+    "nuxt-icon": "^0.6.10",
+    "shadcn-nuxt": "^0.10.2",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@nuxtjs/color-mode": "^3.4.0",
+    "@selemondev/vue3-marquee": "^0.0.8",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-vue-next": "^0.368.0",
+    "nuxt": "^3.11.2",
+    "radix-vue": "^1.7.0",
+    "tailwind-merge": "^2.2.2",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "vue-sonner": "^1.1.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -33,11 +51,5 @@
     "*.{.js,.jsx,ts,tsx,vue}": [
       "eslint --fix"
     ]
-  },
-  "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.80",
-    "nuxt": "^3.11.2",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
   }
 }

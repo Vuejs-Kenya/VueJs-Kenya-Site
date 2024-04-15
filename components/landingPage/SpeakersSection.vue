@@ -155,7 +155,7 @@ const speakers = [
     title: 'Senior Software Engineer @Microsoft',
     githubURL: 'https://github.com/habbes',
     twitterURL: 'https://twitter.com/habyhabbes',
-    imageURL: 'https://pbs.twimg.com/profile_images/1399427654302978057/5QplxV2A_200x200.jpg',
+    imageURL: 'https://github.com/habbes.png',
     talks: [
       {
         id: useId(),

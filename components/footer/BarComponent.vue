@@ -38,14 +38,11 @@ const colorMode = useColorMode()
       <div
         class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t dark:before:border-gray-800 before:mr-4 after:flex-[1_1_0%] after:border-t dark:after:border-gray-800 after:ml-4"
       >
-        <ClientOnly>
-          <div class="flex items-center space-x-1" :class="{ 'space-x-3': colorMode.preference === 'dark' }">
-            <img
-              src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg w-9 h-9"
-              :class="{ 'bg-white': colorMode.preference === 'dark' }"
-            >
-          </div>
-        </ClientOnly>
+        <div class="flex items-center space-x-1 dark:space-x-3">
+          <img
+            src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg bg-transparent dark:bg-white w-9 h-9"
+          >
+        </div>
       </div>
 
       <div class="flex flex-col w-full space-y-3 sm:space-y-0 sm:flex-row sm:flex sm:justify-between">

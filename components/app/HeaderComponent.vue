@@ -88,8 +88,7 @@ onMounted(() => {
     <nav class="flex items-center justify-between h-16 mx-auto max-w-7xl">
       <div class="flex items-center space-x-1" :class="{ 'space-x-3': colorMode.preference === 'dark' }">
         <img
-          src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg w-7 h-7 md:w-9 md:h-9"
-          :class="{ 'bg-white': colorMode.preference === 'dark' }"
+          src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg bg-transparent dark:bg-white w-7 h-7 md:w-9 md:h-9"
         >
         <h1 class="md:text-lg font-semibold">
           VueJs Kenya

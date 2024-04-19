@@ -34,7 +34,7 @@ const props = defineProps<{
         </div>
       </div>
     </div>
-    <div class="overflow-y-scroll flex flex-col space-y-2 h-28">
+    <div class="overflow-y-scroll scrollbar-hide flex flex-col space-y-2 h-28">
       <ul v-for="talk in props.content" :key="talk.id">
         <li>
           - {{ talk.talk }}

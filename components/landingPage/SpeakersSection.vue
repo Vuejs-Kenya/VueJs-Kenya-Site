@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import MarqueeCardComponent from '../marquee/CardComponent.vue'
 import BaseContainerComponent from '../base/ContainerComponent.vue'
+import SpeakerCallToAction from '~/components/card/SpeakerCallToAction.vue'
 
 const speakers = [
   {
@@ -436,19 +437,21 @@ const speakers = [
 
 <template>
   <BaseContainerComponent>
-    <div class="flex flex-col items-center space-y-8">
-      <div>
+    <div class="flex flex-col space-y-8">
+      <div class="items-center">
         <h1 class="text-3xl sm:text-4xl text-center font-semibold">
-          Meet Our Past <span
-            class="text-green-500"
-          >Speakers</span>
+          Meet Our Past <span class="text-green-500">Speakers</span>
         </h1>
       </div>
       <Marquee class="max-w-[300px] sm:max-w-2xl lg:max-w-4xl xl:max-w-7xl" :pause-on-hover="true" :fade="true">
         <div v-for="{ id, name, title, talks, githubURL, twitterURL, imageURL } in speakers" :key="id">
-          <MarqueeCardComponent :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks" :title="title" :name="name" :avatar="imageURL" />
+          <MarqueeCardComponent
+            :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks" :title="title"
+            :name="name" :avatar="imageURL"
+          />
         </div>
       </Marquee>
+      <SpeakerCallToAction />
     </div>
   </BaseContainerComponent>
 </template>

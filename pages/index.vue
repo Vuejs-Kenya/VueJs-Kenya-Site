@@ -1,7 +1,7 @@
 <script setup lang='ts'>
-import LandingPageHeroSection from '../components/landingPage/HeroSection.vue'
-import LandingPageAboutSection from '../components/landingPage/AboutSection.vue'
-import LandingPageSpeakersSection from '../components/landingPage/SpeakersSection.vue'
+import LandingPageHeroSection from '~/components/landingPage/HeroSection.vue'
+import LandingPageAboutSection from '~/components/landingPage/AboutSection.vue'
+import LandingPageSpeakersSection from '~/components/landingPage/SpeakersSection.vue'
 
 const communityInformation = [
   {

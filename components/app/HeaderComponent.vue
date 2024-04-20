@@ -37,8 +37,8 @@ const navLinks = [
 
   {
     id: 5,
-    name: 'Sponsors',
-    path: '#',
+    name: 'Tickets',
+    path: '/ticket',
   },
 
   {
@@ -52,14 +52,14 @@ const socialMediaLinks = [
   {
     id: 1,
     name: 'Github',
-    link: '',
+    link: 'https://github.com/Vuejs-Kenya',
     icon: 'line-md:github',
   },
 
   {
     id: 2,
     name: 'X',
-    link: '',
+    link: 'https://twitter.com/KenyaVue',
     icon: 'line-md:twitter-x',
   },
 ]
@@ -86,14 +86,12 @@ onMounted(() => {
     class="sticky top-0 z-50 w-full px-6 -mb-px backdrop-blur dark:border-gray-800 lg:mb-0 lg:border-0"
   >
     <nav class="flex items-center justify-between h-16 mx-auto max-w-7xl">
-      <div class="flex items-center space-x-1" :class="{ 'space-x-3': colorMode.preference === 'dark' }">
-        <img
-          src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg bg-transparent dark:bg-white w-7 h-7 md:w-9 md:h-9"
-        >
+      <NuxtLink to="/" class="flex items-center space-x-1" :class="{ 'space-x-3': colorMode.preference === 'dark' }">
+        <img src="/logo.png" alt="VueJs Kenya Logo" class="rounded-lg bg-transparent dark:bg-white w-7 h-7 md:w-9 md:h-9">
         <h1 class="md:text-lg font-semibold">
           VueJs Kenya
         </h1>
-      </div>
+      </NuxtLink>
 
       <div class="lg:block hidden">
         <ul class="flex  text-sm font-normal tracking-wide text-black dark:text-gray-200">
@@ -113,7 +111,7 @@ onMounted(() => {
         <div>
           <ul class="flex items-center space-x-4">
             <li v-for="{ id, link, icon } in socialMediaLinks" :key="id">
-              <NuxtLink :to="link" class="cursor-pointer hover:text-green-500">
+              <NuxtLink :to="link" target="_blank" class="cursor-pointer hover:text-green-500">
                 <Icon
                   :name="icon"
                   class="w-5 h-5 text-gray-500 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
@@ -127,10 +125,7 @@ onMounted(() => {
       <div class="block lg:hidden">
         <Sheet>
           <SheetTrigger>
-            <button
-              type="button"
-              class="w-8 h-8 grid place-items-center rounded-full border dark:border-gray-600"
-            >
+            <button type="button" class="w-8 h-8 grid place-items-center rounded-full border dark:border-gray-600">
               <Icon name="charm:menu-hamburger" class="text-lg text-black dark:text-white" />
             </button>
           </SheetTrigger>

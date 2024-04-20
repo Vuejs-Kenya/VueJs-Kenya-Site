@@ -30,7 +30,7 @@ defineProps<{
             <h2 class="text-lg font-semibold leading-8 tracking-tight text-green-600">
               Who are we
             </h2>
-            <p class="mt-2 text-3xl font-bold tracking-tight dark:text-white sm:text-4xl">
+            <p class="mt-2 text-3xl font-semibold tracking-tight dark:text-white sm:text-4xl">
               A community of Vue developers
             </p>
             <p class="mt-6 mb-2 text-base leading-7 dark:text-gray-300">

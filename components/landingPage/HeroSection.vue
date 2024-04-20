@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ButtonEmailComponent from '../button/EmailComponent.vue'
+import ButtonCustomComponent from '../button/CustomComponent.vue'
 import BaseContainerComponent from '../base/ContainerComponent.vue'
 import UIInput from '../ui/input/Input.vue'
 
@@ -39,7 +39,7 @@ async function handleSubscribe() {
         <div class="flex w-full mx-auto text-left">
           <div class="relative inline-flex items-center mx-auto align-middle">
             <div class="space-y-4 text-center">
-              <h1 class="block text-3xl font-bold dark:text-white sm:text-4xl lg:text-5xl lg:leading-tight">
+              <h1 class="block text-3xl font-semibold dark:text-white sm:text-4xl lg:text-5xl lg:leading-tight">
                 A community of <span class="text-green-500">Vue</span> developers <br class="hidden lg:block">
                 supercharging the web
               </h1>
@@ -58,7 +58,7 @@ async function handleSubscribe() {
             />
             <!-- <InputEmailComponent id="userEmailAddress" v-model="userEmailAddress" name="userEmailAddress"
               section="hero" /> -->
-            <ButtonEmailComponent :loading="loading" label="Join" @click="handleSubscribe" />
+            <ButtonCustomComponent :loading="loading" label="Join" @click="handleSubscribe" />
           </div>
         </div>
       </div>

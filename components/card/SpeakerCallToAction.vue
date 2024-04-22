@@ -20,7 +20,7 @@ import ButtonCustomComponent from '../button/CustomComponent.vue'
             <h2 class="text-2xl font-medium text-center dark:text-white">
               Become the next VueJs Kenya <span class="text-green-500 "> <br> Speaker</span>
             </h2>
-            <ButtonCustomComponent label="Become a speaker" />
+            <ButtonCustomComponent :loading="false" label="Become a speaker" />
           </div>
         </div>
 

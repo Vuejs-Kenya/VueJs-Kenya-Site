@@ -31,7 +31,7 @@ const navLinks = [
 
   {
     id: 4,
-    name: 'Partners',
+    name: 'Events',
     path: '#',
   },
 

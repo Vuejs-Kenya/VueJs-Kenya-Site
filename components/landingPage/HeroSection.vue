@@ -2,6 +2,7 @@
 import ButtonCustomComponent from '../button/CustomComponent.vue'
 import BaseContainerComponent from '../base/ContainerComponent.vue'
 import UIInput from '../ui/input/Input.vue'
+import ButtonPillComponent from '../button/PillComponent.vue'
 
 const userEmailAddress = ref('')
 const loading = ref(false)
@@ -33,9 +34,9 @@ async function handleSubscribe() {
   <BaseContainerComponent>
     <section class="w-full mt-16 lg:mt-0">
       <div class="relative items-center w-full mx-auto space-y-8 md:px-12 lg:px-16 lg:py-24">
-        <!-- <div class="grid place-items-center">
-          <ButtonPill title="Nuxt Nation Event" />
-        </div> -->
+        <div class="grid place-items-center">
+          <ButtonPillComponent title="May 4th: Vue Meetup" description="Vue Conference is here. RSVP now!" />
+        </div>
         <div class="flex w-full mx-auto text-left">
           <div class="relative inline-flex items-center mx-auto align-middle">
             <div class="space-y-4 text-center">

@@ -443,7 +443,10 @@ const speakers = [
           Meet Our Past <span class="text-green-500">Speakers</span>
         </h1>
       </div>
-      <Marquee class="max-w-[300px] sm:max-w-2xl lg:max-w-4xl xl:max-w-7xl" :pause-on-hover="true" :fade="true">
+      <Marquee
+        class="max-w-[430px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-7xl" :pause-on-hover="true"
+        :fade="true"
+      >
         <div v-for="{ id, name, title, talks, githubURL, twitterURL, imageURL } in speakers" :key="id">
           <MarqueeCardComponent
             :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks" :title="title"

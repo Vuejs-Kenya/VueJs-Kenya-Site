@@ -27,7 +27,7 @@ defineProps<{
 
         <div class="flex flex-col items-start max-w-5xl gap-10 mx-auto lg:flex-row lg:px-8">
           <div class="w-full text-center md:text-start lg:sticky lg:top-20 lg:w-[28rem]">
-            <h2 class="text-lg font-semibold leading-8 tracking-tight text-green-600">
+            <h2 class="text-lg font-semibold leading-8 tracking-tight text-green-500">
               Who are we
             </h2>
             <p class="mt-2 text-3xl font-semibold tracking-tight dark:text-white sm:text-4xl">

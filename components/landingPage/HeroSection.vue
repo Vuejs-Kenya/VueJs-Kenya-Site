@@ -57,8 +57,6 @@ async function handleSubscribe() {
               v-model="userEmailAddress" placeholder="Email Address"
               class="w-72 border border-gray-300 dark:border-gray-700"
             />
-            <!-- <InputEmailComponent id="userEmailAddress" v-model="userEmailAddress" name="userEmailAddress"
-              section="hero" /> -->
             <ButtonCustomComponent :loading="loading" label="Join" @click="handleSubscribe" />
           </div>
         </div>

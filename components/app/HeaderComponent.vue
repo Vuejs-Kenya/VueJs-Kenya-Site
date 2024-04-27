@@ -17,34 +17,23 @@ const navLinks = [
     name: 'Workshops',
     path: '#',
   },
+
   {
     id: 2,
-    name: 'Jobs',
+    name: 'Events',
     path: '#',
   },
 
   {
     id: 3,
     name: 'Speakers',
-    path: '#',
+    path: '/speakers',
   },
 
   {
     id: 4,
-    name: 'Events',
-    path: '#',
-  },
-
-  {
-    id: 5,
-    name: 'Tickets',
-    path: '/ticket',
-  },
-
-  {
-    id: 6,
     name: 'Blog',
-    path: '#',
+    path: '/blog',
   },
 ]
 
@@ -98,7 +87,7 @@ onMounted(() => {
           <li v-for="{ id, name, path } in navLinks" :key="id">
             <NuxtLink
               :to="path" :class="{ 'text-green-500': path === $route.fullPath }"
-              class="transition-all duration-200 ease-in cursor-pointer md:px-4 hover:text-green-500"
+              class="transition-all duration-200 ease-in font-semibold cursor-pointer md:px-4 hover:text-green-500"
             >
               {{ name }}
             </NuxtLink>

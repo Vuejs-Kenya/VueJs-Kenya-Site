@@ -5,7 +5,14 @@ module.exports = {
   darkMode: ['class'],
   safelist: ['dark'],
   prefix: '',
-
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    'app.vue'
+  ],
   theme: {
     container: {
       center: true,
@@ -15,6 +22,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        Inter: 'Inter'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -85,6 +95,7 @@ module.exports = {
   },
   plugins: [
     animate,
-    require('tailwind-scrollbar-hide')
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/typography')
   ],
 }

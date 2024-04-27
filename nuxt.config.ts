@@ -6,10 +6,33 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
+    'nuxt-content-assets',
+    '@nuxt/content',
     'shadcn-nuxt',
+  ],
+  extends: [
+    '@nuxt-themes/elements',
+    '@nuxt-themes/typography',
   ],
   colorMode: {
     classSuffix: '',
+  },
+  content: {
+    highlight: {
+      theme: {
+        dark: 'one-dark-pro',
+        default: 'one-dark-pro',
+      },
+    },
+    markdown: {
+      // Object syntax can be used to override default options
+      remarkPlugins: {
+        // Override remark-emoji options
+        'remark-emoji': {
+          emoticon: true,
+        },
+      },
+    },
   },
   shadcn: {
     prefix: 'UI',

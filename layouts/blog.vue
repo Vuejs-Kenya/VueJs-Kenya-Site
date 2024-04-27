@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import AppHeaderComponent from '~/components/app/HeaderComponent.vue'
 import AppFooterComponent from '~/components/app/FooterComponent.vue'
 </script>
@@ -14,13 +14,11 @@ import AppFooterComponent from '~/components/app/FooterComponent.vue'
     <ClientOnly>
       <AppHeaderComponent />
     </ClientOnly>
-
     <div class="flex-1 flex-col">
       <main class="flex-1">
         <slot />
       </main>
     </div>
-
     <AppFooterComponent />
   </div>
 </template>

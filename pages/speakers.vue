@@ -475,7 +475,7 @@ const speakerGuideLines = [
             <h1 class="text-3xl sm:text-4xl text-center font-semibold">
               Meet Our Past <span class="text-green-500">Speakers</span>
             </h1>
-            <p class="max-w-2xl font-Inter px-2 md:px-0">
+            <p class="max-w-2xl font-Inter dark:text-gray-300 px-2 text-sm md:text-md md:px-0">
               At VueJS Kenya, we welcome both seasoned developers and rising stars as speakers, fostering a
               thriving
               community where
@@ -488,8 +488,8 @@ const speakerGuideLines = [
         >
           <div v-for="{ id, name, title, talks, githubURL, twitterURL, imageURL } in speakers" :key="id">
             <CardSpeakerComponent
-              :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks"
-              :title="title" :name="name" :avatar="imageURL"
+              :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks" :title="title"
+              :name="name" :avatar="imageURL"
             />
           </div>
         </div>
@@ -501,7 +501,7 @@ const speakerGuideLines = [
             Speaker<span class="text-green-500"> guidelines</span>
           </h1>
         </div>
-        <div class="flex flex-col space-y-6">
+        <div class="flex flex-col space-y-6 px-6">
           <ul
             v-for="speakerGuideLine in speakerGuideLines" :key="speakerGuideLine.id"
             class="list-disc list-outside pr-[revert]"

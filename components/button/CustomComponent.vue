@@ -22,7 +22,7 @@ defineProps<{
     </span>
     <div v-else class="relative z-20 text-sm flex items-center space-x-3">
       <Icon v-if="iconName" :name="iconName" class="text-xl" />
-      <p class="text-[16px] leading-[22px]">
+      <p class="text-[16px] font-semibold leading-[22px]">
         {{ label }}
       </p>
     </div>

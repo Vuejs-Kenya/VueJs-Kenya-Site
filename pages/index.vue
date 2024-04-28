@@ -40,6 +40,7 @@ const communityInformation = [
     <div class="space-y-10 md:space-y-28">
       <LandingPageAboutSection :community-information="communityInformation" />
       <LandingPageSpeakersSection />
+      <LandingPageTeamSection />
     </div>
   </div>
 </template>

@@ -22,6 +22,9 @@
     "@tailwindcss/typography": "^0.5.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "embla-carousel": "^8.0.2",
+    "embla-carousel-autoplay": "^8.0.2",
+    "embla-carousel-vue": "^8.0.2",
     "lucide-vue-next": "^0.368.0",
     "nuxt": "^3.11.2",
     "nuxt-content-assets": "^1.4.3",
@@ -32,7 +35,8 @@
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "vue-sonner": "^1.1.2"
+    "vue-sonner": "^1.1.2",
+    "youtube-vue3": "^0.1.15"
   },
   "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.21",

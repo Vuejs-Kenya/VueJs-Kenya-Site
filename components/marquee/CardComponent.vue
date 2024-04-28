@@ -21,7 +21,7 @@ const props = defineProps<{
 
 <template>
   <div
-    class="h-56 px-5 py-3 space-y-3 text-sm bg-white dark:bg-transparent dark:border-gray-900 border rounded-lg shadow-sm w-72 md:w-80"
+    class="h-56 px-5 py-3 space-y-3 text-sm bg-white dark:bg-transparent dark:border-gray-800 border rounded-lg shadow-sm w-72 md:w-80"
   >
     <div class="flex items-center gap-2">
       <img :src="props.avatar" :alt="props.name" class="rounded-full size-10">

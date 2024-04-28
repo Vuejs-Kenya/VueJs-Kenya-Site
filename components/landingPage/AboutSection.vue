@@ -33,20 +33,16 @@ defineProps<{
             <p class="mt-2 text-3xl font-semibold tracking-tight dark:text-white sm:text-4xl">
               A community of Vue developers
             </p>
-            <p class="mt-6 mb-2 text-base leading-7 dark:text-gray-300">
+            <p class="mt-6 mb-2 text-base font-Inter leading-7 dark:text-gray-300">
               Our community is committed to promoting the use of Vue.js and other cutting-edge technologies in
               Kenya,
               through regular meetups, workshops, hackathons, and other events.
             </p>
           </div>
           <div class="flex-1 mt-5 md:mt-0">
-            <dl
-              class="grid w-full grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2 lg:grid-cols-1 lg:max-w-none lg:gap-y-16"
-            >
+            <dl class="grid w-full grid-cols-1 gap-y-10 gap-x-8 md:grid-cols-2 lg:grid-cols-1 lg:max-w-none lg:gap-y-16">
               <div v-for="{ id, content, title, icon } in communityInformation" :key="id">
-                <div
-                  class="relative px-6 py-10 bg-white dark:bg-transparent dark:border-gray-800 border rounded-lg"
-                >
+                <div class="relative px-6 py-10 bg-white dark:bg-transparent dark:border-gray-800 border rounded-lg">
                   <div
                     class="flex items-center justify-center w-10 h-10 backdrop-blur-[12px] dark:bg-green-600 bg-opacity-60 border-2 border-green-500 rounded-lg"
                   >
@@ -56,7 +52,7 @@ defineProps<{
                   <dt class="mt-4 text-lg font-semibold leading-7 dark:text-white">
                     {{ title }}
                   </dt>
-                  <dd class="mt-2 text-base leading-7 dark:text-gray-300">
+                  <dd class="mt-2 text-base font-Inter leading-7 dark:text-gray-300">
                     {{ content }}
                   </dd>
                 </div>

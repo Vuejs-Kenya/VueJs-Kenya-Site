@@ -43,7 +43,7 @@ const props = defineProps<{
     <div class="overflow-y-scroll scrollbar-hide flex flex-col space-y-2 h-28">
       <ul v-for="talk in props.content" :key="talk.id" class="list-disc list-outside pl-[revert]">
         <li
-          class="dark:text-gray-400 hover:dark:text-gray-200 w-56 cursor-pointer duration-200 ease-in text-gray-700 hover:text-gray-900"
+          class="dark:text-gray-400 hover:dark:text-gray-200 w-56 font-Inter cursor-pointer duration-200 ease-in text-gray-700 hover:text-gray-900"
         >
           {{ talk.talk }}
         </li>

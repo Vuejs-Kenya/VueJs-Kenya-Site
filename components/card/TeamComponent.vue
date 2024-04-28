@@ -13,9 +13,9 @@ defineProps<{
   <div class="flex h-full flex-col space-y-3 lg:space-y-1 lg:flex-row space-x-2">
     <div class="grid place-items-center">
       <div class="w-[250px] md:w-[300px] lg:w-[200px]">
-        <AspectRatio :ratio="16 / 9">
+        <div>
           <img :src="imageURL" :alt="name" class="rounded-md object-cover">
-        </AspectRatio>
+        </div>
       </div>
     </div>
     <div class="flex items-center md:items-start flex-col justify-between px-0 md:px-2 space-y-3 lg:space-y-2">
@@ -23,13 +23,13 @@ defineProps<{
         <h3 class="text-xl font-bold text-center md:text-start text-gray-800 dark:text-gray-200 truncate md:block">
           {{ name }}
         </h3>
-        <p class=" dark:text-gray-300 text-gray-700 text-sm font-bold">
+        <p class=" dark:text-gray-300 text-gray-600 text-sm font-bold">
           {{ title }}
         </p>
       </div>
 
       <div>
-        <p class="text-gray-600 text-center md:text-start font-Inter dark:text-[#94A3B8]">
+        <p class="text-gray-600 text-center md:text-start font-sans dark:text-[#94A3B8]">
           {{ description }}
         </p>
       </div>

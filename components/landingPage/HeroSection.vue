@@ -44,7 +44,7 @@ async function handleSubscribe() {
                 A community of <span class="text-green-500">Vue</span> developers <br class="hidden lg:block">
                 supercharging the web
               </h1>
-              <p class="max-w-xl mx-auto font-Inter text-base leading-relaxed dark:text-gray-400 text-gray-600">
+              <p class="max-w-xl mx-auto font-Inter text-base leading-relaxed dark:text-gray-400 text-gray-700">
                 Join 500 fellow Nuxt & Vue
                 Developers to learn everything Nuxt and Vue have to offer!
               </p>

@@ -29,14 +29,14 @@ const props = defineProps<{
         <div class="font-medium">
           {{ props.name }}
         </div>
-        <div class="text-xs text-stone-600 dark:text-stone-300">
+        <div class="text-xs font-Inter text-stone-600 dark:text-stone-300">
           {{ props.title }}
         </div>
       </div>
     </div>
     <div class="overflow-y-scroll scrollbar-hide flex flex-col space-y-2 h-28">
       <ul v-for="talk in props.content" :key="talk.id">
-        <li>
+        <li class="font-Inter">
           - {{ talk.talk }}
         </li>
       </ul>

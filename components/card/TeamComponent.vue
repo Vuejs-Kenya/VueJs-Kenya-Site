@@ -23,13 +23,13 @@ defineProps<{
         <h3 class="text-xl font-bold text-center md:text-start text-gray-800 dark:text-gray-200 truncate md:block">
           {{ name }}
         </h3>
-        <p class=" dark:text-gray-300 text-gray-600 text-sm font-bold">
+        <p class=" dark:text-gray-300 text-gray-600 text-md font-semibold">
           {{ title }}
         </p>
       </div>
 
       <div>
-        <p class="text-gray-600 text-center md:text-start font-sans dark:text-[#94A3B8]">
+        <p class="text-gray-600 font-Inter text-center md:text-start dark:text-[#94A3B8]">
           {{ description }}
         </p>
       </div>

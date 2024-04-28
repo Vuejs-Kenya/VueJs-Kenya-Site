@@ -1,7 +1,6 @@
 <script setup lang='ts'>
-import MarqueeCardComponent from '../marquee/CardComponent.vue'
-import BaseContainerComponent from '../base/ContainerComponent.vue'
-import SpeakerCallToAction from '~/components/card/SpeakerCallToAction.vue'
+import CardSpeakerComponent from '~/components/card/SpeakerComponent.vue'
+import BaseContainerComponent from '~/components/base/ContainerComponent.vue'
 
 const speakers = [
   {
@@ -433,28 +432,86 @@ const speakers = [
     ],
   },
 ]
+
+const speakerGuideLines = [
+  {
+    id: 1,
+    guideline: 'Make sure you\'re familiar with the topic and have your presentation and any required materials ready.',
+  },
+
+  {
+    id: 2,
+    guideline: 'The speaker should be respectful to the audience and fellow speakers. Harassment or discriminatory behavior will not be tolerated.',
+  },
+
+  {
+    id: 3,
+    guideline: 'Ensure that your content is accessible and inclusive to all attendees, regardless of their background or level of expertise.',
+  },
+
+  {
+    id: 4,
+    guideline: 'Keep your presentation lively and engaging, using visuals and anecdotes to illustrate your points and maintain audience interest.',
+  },
+
+  {
+    id: 5,
+    guideline: 'The speaker should be open to receiving feedback and suggestions from the audience and event organizers.',
+  },
+
+  {
+    id: 6,
+    guideline: 'The event organizers may record or live stream the presentation. The speaker should be informed of this and provide consent beforehand.',
+  },
+]
 </script>
 
 <template>
   <BaseContainerComponent>
-    <div class="flex flex-col space-y-8">
-      <div class="items-center">
-        <h1 class="text-3xl sm:text-4xl text-center font-semibold">
-          Meet Our Past <span class="text-green-500">Speakers</span>
-        </h1>
-      </div>
-      <Marquee
-        class="max-w-[430px] sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-7xl" :pause-on-hover="true"
-        :fade="true"
-      >
-        <div v-for="{ id, name, title, talks, githubURL, twitterURL, imageURL } in speakers" :key="id">
-          <MarqueeCardComponent
-            :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks" :title="title"
-            :name="name" :avatar="imageURL"
-          />
+    <div class="mt-12 flex flex-col space-y-16">
+      <div>
+        <div class="mb-4 text-center">
+          <div class="flex flex-col space-y-3 items-center">
+            <h1 class="text-3xl sm:text-4xl text-center font-semibold">
+              Meet Our Past <span class="text-green-500">Speakers</span>
+            </h1>
+            <p class="max-w-2xl font-Inter px-2 md:px-0">
+              At VueJS Kenya, we welcome both seasoned developers and rising stars as speakers, fostering a
+              thriving
+              community where
+              every voice fuels growth.
+            </p>
+          </div>
         </div>
-      </Marquee>
-      <SpeakerCallToAction />
+        <div
+          class="grid place-items-center grid-cols-1 gap-x-6 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-7xl mx-auto mt-20"
+        >
+          <div v-for="{ id, name, title, talks, githubURL, twitterURL, imageURL } in speakers" :key="id">
+            <CardSpeakerComponent
+              :twitter-u-r-l="twitterURL" :github-u-r-l="githubURL" :content="talks"
+              :title="title" :name="name" :avatar="imageURL"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col space-y-10">
+        <div class="grid place-items-center">
+          <h1 class="text-3xl sm:text-4xl text-center leading-10 font-semibold">
+            Speaker<span class="text-green-500"> guidelines</span>
+          </h1>
+        </div>
+        <div class="flex flex-col space-y-6">
+          <ul
+            v-for="speakerGuideLine in speakerGuideLines" :key="speakerGuideLine.id"
+            class="list-disc list-outside pr-[revert]"
+          >
+            <li class="text-black cursor-pointer duration-200 ease-in dark:text-white">
+              {{ speakerGuideLine.guideline }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </BaseContainerComponent>
 </template>

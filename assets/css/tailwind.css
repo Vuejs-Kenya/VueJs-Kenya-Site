@@ -73,6 +73,10 @@
     @apply border-border;
   }
   body {
-    @apply bg-background dark:bg-[#OB210E] text-foreground;
+    @apply bg-background dark:bg-[#OB210E] font-Inter text-foreground;
+  }
+
+  ul, ol {
+    list-style: revert;
   }
 }

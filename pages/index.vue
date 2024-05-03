@@ -2,6 +2,8 @@
 import LandingPageHeroSection from '~/components/landingPage/HeroSection.vue'
 import LandingPageAboutSection from '~/components/landingPage/AboutSection.vue'
 import LandingPageSpeakersSection from '~/components/landingPage/SpeakersSection.vue'
+import LandingPageCommunitySection from '~/components/landingPage/CommunitySection.vue'
+import LandingPageNewsLetterSection from '~/components/LandingPage/NewsLetterSection.vue'
 
 const communityInformation = [
   {
@@ -37,10 +39,12 @@ const communityInformation = [
 <template>
   <div class="space-y-10">
     <LandingPageHeroSection />
-    <div class="space-y-10 md:space-y-28">
+    <div class="space-y-16 md:space-y-28">
       <LandingPageAboutSection :community-information="communityInformation" />
       <LandingPageSpeakersSection />
       <LandingPageTeamSection />
+      <LandingPageCommunitySection />
+      <LandingPageNewsLetterSection />
     </div>
   </div>
 </template>

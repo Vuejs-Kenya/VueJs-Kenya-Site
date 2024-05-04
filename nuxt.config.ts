@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     'nuxt-content-assets',
     '@nuxt/content',
     'shadcn-nuxt',
+    'nuxt-aos',
   ],
   extends: [
     '@nuxt-themes/elements',

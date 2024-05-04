@@ -438,7 +438,7 @@ const speakers = [
 <template>
   <BaseContainerComponent>
     <div class="flex flex-col space-y-8">
-      <div class="items-center">
+      <div data-aos="fade-up" class="items-center">
         <h1 class="text-3xl sm:text-4xl text-center font-semibold">
           Meet Our Past <span class="text-green-500">Speakers</span>
         </h1>

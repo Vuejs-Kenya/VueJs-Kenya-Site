@@ -64,6 +64,14 @@ const products = [
     image: 'https://raw.githubusercontent.com/selemondev/vscode-preview-docs/master/src/assets/images/preview-docs.png',
     link: 'https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-preview-docs',
   },
+
+  {
+    id: 8,
+    name: 'Api Wap',
+    icon: '/api-wap.png',
+    image: '/api-wap-landing-page.png',
+    link: 'https://apiwap.com/',
+  },
 ]
 </script>
 

@@ -22,8 +22,12 @@ const { data: post } = await useAsyncData(`article-${route.path}`, () => queryCo
       </NuxtLink>
       <div class="grid px-4 place-items-center md:px-0">
         <img
-          class="object-cover w-full rounded-xl" :src="`${'/_nuxt/content/'}${post?.imageUrl[0]}`"
-          :alt="post?.title"
+          v-if="Array.isArray(post?.imageUrl)" class="object-cover w-full rounded-xl"
+          :src="`${'/_nuxt/content/'}${post?.imageUrl[0]}`" :alt="post?.title"
+        >
+        <img
+          v-else class="object-cover w-full rounded-xl"
+          :src="`${post?.imageUrl}`" :alt="post?.title"
         >
       </div>
     </div>
@@ -51,6 +55,6 @@ const { data: post } = await useAsyncData(`article-${route.path}`, () => queryCo
 
 <style scoped>
 img {
-    view-transition-name: selected-film;
+  view-transition-name: selected-film;
 }
 </style>

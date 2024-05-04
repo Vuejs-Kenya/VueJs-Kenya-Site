@@ -2,8 +2,8 @@
 import LandingPageHeroSection from '~/components/landingPage/HeroSection.vue'
 import LandingPageAboutSection from '~/components/landingPage/AboutSection.vue'
 import LandingPageSpeakersSection from '~/components/landingPage/SpeakersSection.vue'
-import LandingPageCommunitySection from '~/components/landingPage/CommunitySection.vue'
-import LandingPageNewsLetterSection from '~/components/LandingPage/NewsLetterSection.vue'
+import LandingPageProductSection from '~/components/landingPage/ProductSection.vue'
+import LandingPageNewsLetterSection from '~/components/landingPage/NewsLetterSection.vue'
 
 const communityInformation = [
   {
@@ -43,7 +43,7 @@ const communityInformation = [
       <LandingPageAboutSection :community-information="communityInformation" />
       <LandingPageSpeakersSection />
       <LandingPageTeamSection />
-      <LandingPageCommunitySection />
+      <LandingPageProductSection />
       <LandingPageNewsLetterSection />
     </div>
   </div>

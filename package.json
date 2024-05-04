@@ -29,6 +29,7 @@
     "h3-valibot": "^0.0.7",
     "lucide-vue-next": "^0.368.0",
     "nuxt": "^3.11.2",
+    "nuxt-aos": "^1.2.4",
     "nuxt-content-assets": "^1.4.3",
     "radix-vue": "^1.7.0",
     "shadcn-nuxt": "^0.10.2",

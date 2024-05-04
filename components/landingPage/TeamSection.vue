@@ -68,10 +68,13 @@ const teamMembers = [
     <div class="flex flex-col space-y-8">
       <div class="mb-4 text-center">
         <div class="flex flex-col space-y-3 items-center">
-          <h1 class="text-3xl sm:text-4xl text-center font-semibold">
+          <h1 data-aos="fade-up" class="text-3xl sm:text-4xl text-center font-semibold">
             Meet The <span class="text-green-500">Team</span>
           </h1>
-          <p class="max-w-2xl font-Inter px-2 dark:text-gray-300 text-md md:px-0">
+          <p
+            data-aos="fade-up" data-aos-duration="1500"
+            class="max-w-2xl font-Inter px-2 dark:text-gray-300 text-md md:px-0"
+          >
             Welcome to the team! We are a group of passionate individuals working together to achieve the
             community's goals.
           </p>

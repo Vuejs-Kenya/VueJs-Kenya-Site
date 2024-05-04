@@ -26,6 +26,7 @@
     "embla-carousel": "^8.0.2",
     "embla-carousel-autoplay": "^8.0.2",
     "embla-carousel-vue": "^8.0.2",
+    "h3-valibot": "^0.0.7",
     "lucide-vue-next": "^0.368.0",
     "nuxt": "^3.11.2",
     "nuxt-content-assets": "^1.4.3",
@@ -36,8 +37,9 @@
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0",
-    "vue-sonner": "^1.1.2",
-    "youtube-vue3": "^0.1.15",
+    "vue-sonner": "^1.1.2"
+  },
+  "devDependencies": {
     "@antfu/eslint-config": "1.0.0-beta.21",
     "@nuxt-themes/elements": "^1.0.6",
     "@nuxt-themes/typography": "^1.0.1",
@@ -53,8 +55,6 @@
     "nuxt-icon": "^0.6.10",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.4.5"
-  },
-  "devDependencies": {
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

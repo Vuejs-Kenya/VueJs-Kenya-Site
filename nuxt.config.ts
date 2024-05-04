@@ -61,5 +61,4 @@ export default defineNuxtConfig({
     viewer: true,
   },
   devtools: { enabled: true },
-  ssr: false,
 })

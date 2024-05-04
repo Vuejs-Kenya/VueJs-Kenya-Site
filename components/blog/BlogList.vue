@@ -8,7 +8,7 @@ function readingTime(content: any) {
   let minutes = 0
   const contentAsString = JSON.stringify(content)
   const words = contentAsString.split(' ').length
-  const wordsPerMinute = 225
+  const wordsPerMinute = 250
 
   minutes = Math.ceil(words / wordsPerMinute)
 
@@ -17,7 +17,7 @@ function readingTime(content: any) {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 gap-4 px-2 py-1 space-y-8 md:space-y-0 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+  <div class="grid grid-cols-1 gap-4 px-2 py-1 space-y-8 md:space-y-0 lg:grid-cols-2 xl:grid-cols-3">
     <div v-for="post in props.data " :key="post._path">
       <NuxtLink :to="post._path" class="cursor-pointer">
         <div
@@ -35,7 +35,7 @@ function readingTime(content: any) {
             <div class="px-4 pb-4">
               <div class="flex flex-col my-6 justify-between space-y-3">
                 <h3
-                  class="text-xl line-clamp-2 font-semibold text-gray-800 dark:text-gray-200 dark:group-hover:text-white"
+                  class="text-xl line-clamp-1 font-semibold text-gray-800 dark:text-gray-200 dark:group-hover:text-white"
                 >
                   {{ post.headline }}
                 </h3>
@@ -51,7 +51,7 @@ function readingTime(content: any) {
                       {{ post.author }}
                     </h5>
                     <p class="text-sm dark:text-gray-400">
-                      {{ readingTime(post) }} min read
+                      {{ readingTime(post.body) }} min read
                     </p>
                   </div>
                   <time :datetime="$formatDate(post.date)" class="text-sm dark:text-gray-400">{{

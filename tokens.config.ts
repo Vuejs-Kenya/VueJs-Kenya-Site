@@ -63,8 +63,8 @@ export default defineTheme({
               dark: colors.gray[50],
             },
             hover: {
-              initial: colors.purple[500],
-              dark: colors.purple[500],
+              initial: colors.green[500],
+              dark: colors.green[500],
             },
           },
         },
@@ -81,7 +81,7 @@ export default defineTheme({
         background: {
           static: {},
           hover: {
-            initial: colors.purple[50],
+            initial: colors.green[50],
             dark: '{typography.color.primary.900}',
           },
         },

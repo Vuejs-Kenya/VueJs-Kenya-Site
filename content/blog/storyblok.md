@@ -1,11 +1,10 @@
 ---
-title: 'Nuxt Apollo'
-description: "In September 2017, Cloudflare introduced Cloudflare Workers, giving the ability to run JavaScript on their edge network. This means your code will deploy on the entire edge network in over a hundred locations worldwide in about 30 seconds. This technology allows you to focus on writing your application close to your users, wherever they are in the world (~50ms latency)."
-headline: 'Nuxt Apollo'
-excerpt: "We started with our server and created unjs/h3: a minimal http framework built for high performance and portability. It replaces Connect we used in Nuxt 2 but has compatibility with it so you can keep using Connect/Express middleware. In the workers, for each incoming request, it starts Nuxt in production, sends the request to it and sends back the response."
-date: '2023-08-30'
-imageUrl: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1674297646730/8c583654-9a93-422f-94f3-70b7bdcc2e9a.jpeg?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp'
-tags: ['Vue', 'Nuxt', 'React']
+title: "Storyblok: The Headless CMS that takes your content to the next level"
+description: "In the digital age, businesses encounter numerous difficulties when it comes to creating and delivering content that resonates with their audience. Traditional CMS ( Content management systems ) can be inflexible to use, which can result in reduced productivity, lower engagement rates, and decreased customer satisfaction."
+headline: "Storyblok"
+excerpt: "In the digital age, businesses encounter numerous difficulties when it comes to creating and delivering content that resonates with their audience. Traditional CMS ( Content management systems ) can be inflexible to use, which can result in reduced productivity, lower engagement rates, and decreased customer satisfaction."
+date: '2023-05-07'
+imageUrl: 'https://cdn.hashnode.com/res/hashnode/image/upload/v1683449604492/c9dd0d90-e920-491e-ac77-2ac50abeb1df.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp'
 dateUpdated: ''
 author: 'Selemondev'
 authorImg: 'https://github.com/selemondev.png'

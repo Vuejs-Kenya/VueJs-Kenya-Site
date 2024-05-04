@@ -8,22 +8,30 @@ const userEmailAddress = ref('')
 const { $toast } = useNuxtApp()
 const loading = ref(false)
 async function handleSubscribe() {
-  loading.value = true
-  const response = await $fetch('/api/subscribe', {
-    method: 'POST',
-    body: {
-      email: userEmailAddress.value,
-    },
-  })
+  try {
+    loading.value = true
+    const response = await $fetch('/api/subscribe', {
+      method: 'POST',
+      body: {
+        email: userEmailAddress.value,
+      },
+    })
 
-  if (response?.status === 'subscribed') {
-    $toast.success('Thank you for joining our newsletter!')
-    userEmailAddress.value = ''
-    loading.value = false
-  }
-  else {
-    if (response!.statusCode === 400 || 500) {
+    if (response?.status === 'subscribed') {
+      $toast.success('Thank you for joining our newsletter!')
       userEmailAddress.value = ''
+      loading.value = false
+    }
+    else {
+      if (response!.statusCode === 400 || 500) {
+        userEmailAddress.value = ''
+        loading.value = false
+        $toast.error('OOPS! An error occurred. Please try again!')
+      }
+    }
+  }
+  catch (err) {
+    if (err instanceof Error) {
       loading.value = false
       $toast.error('OOPS! An error occurred. Please try again!')
     }
@@ -51,11 +59,10 @@ async function handleSubscribe() {
             >
               <label for="email-address" class="sr-only">Email address</label>
               <Input
-                id="userEmailAddress" v-model="userEmailAddress" placeholder="Email address"
-                name="userEmailAddress" section="footer"
-                class="w-56 dark:border dark:border-gray-700 sm:w-72"
+                id="userEmailAddress" v-model="userEmailAddress" placeholder="Email address" name="userEmailAddress"
+                section="footer" class="w-56 dark:border dark:border-gray-700 sm:w-72"
               />
-              <ButtonCustomComponent :loading="loading" label="Subscribe" @click="handleSubscribe" />
+              <ButtonCustomComponent :loading="loading" label="Subscribe" @btn-click="handleSubscribe" />
             </div>
           </div>
           <dl class="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">

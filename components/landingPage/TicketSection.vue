@@ -138,9 +138,6 @@ function handleColorChange(value: string) {
   const selectedColor = colorSchemes.find(color => color.name.toLowerCase() === value.toLowerCase())
   if (selectedColor)
     colorScheme.value = selectedColor
-
-  else
-    console.warn('Background color cannot be null')
 }
 </script>
 

@@ -6,27 +6,21 @@ import ButtonPillComponent from '../button/PillComponent.vue'
 
 const userEmailAddress = ref('')
 const loading = ref(false)
+const { $toast } = useNuxtApp()
 async function handleSubscribe() {
   loading.value = true
-  // const response = await $fetch('/api/subscribe', {
-  //   method: 'POST',
-  //   body: {
-  //     email: userEmailAddress.value,
-  //   },
-  // })
+  const response = await $fetch('/api/subscribe', {
+    method: 'POST',
+    body: {
+      email: userEmailAddress.value,
+    },
+  })
 
-  // if (data.value?.status === 'subscribed') {
-  //   toast.success('Thank you for joining our newsletter!')
-  //   userEmailAddress.value = ''
-  //   loading.value = false
-  // }
-  // else {
-  //   if (error.value?.statusCode === 400 || 500) {
-  //     userEmailAddress.value = ''
-  //     loading.value = false
-  //     toast.error('OOPS! An error occurred. Please try again!')
-  //   }
-  // }
+  if (response.status === 'subscribed') {
+    $toast.success('Thank you for joining our newsletter!')
+    userEmailAddress.value = ''
+    loading.value = false
+  };
 }
 </script>
 
@@ -57,7 +51,7 @@ async function handleSubscribe() {
               v-model="userEmailAddress" placeholder="Email Address"
               class="w-72 border border-gray-300 dark:border-gray-700"
             />
-            <ButtonCustomComponent :loading="loading" label="Join" @click="handleSubscribe" />
+            <ButtonCustomComponent :loading="loading" label="Join" @btn-click="handleSubscribe" />
           </div>
         </div>
       </div>

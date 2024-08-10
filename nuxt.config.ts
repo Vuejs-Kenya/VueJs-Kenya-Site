@@ -11,13 +11,16 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     'nuxt-aos',
   ],
+
   extends: [
     '@nuxt-themes/elements',
     '@nuxt-themes/typography',
   ],
+
   colorMode: {
     classSuffix: '',
   },
+
   content: {
     highlight: {
       theme: {
@@ -35,23 +38,28 @@ export default defineNuxtConfig({
       },
     },
   },
+
   shadcn: {
     prefix: 'UI',
     componentDir: './components/ui',
   },
+
   googleFonts: {
     families: {
       Inter: true,
     },
   },
+
   experimental: {
     viewTransition: true,
   },
+
   runtimeConfig: {
     mailchimp_api_key: '',
     mailchimp_server_key: '',
     mailchimp_audience_id: '',
   },
+
   tailwindcss: {
     cssPath: ['~/assets/css/tailwind.css', { injectPosition: 'last' }],
     configPath: 'tailwind.config.js',
@@ -61,5 +69,7 @@ export default defineNuxtConfig({
     config: {},
     viewer: true,
   },
+
   devtools: { enabled: true },
+  compatibilityDate: '2024-08-10',
 })

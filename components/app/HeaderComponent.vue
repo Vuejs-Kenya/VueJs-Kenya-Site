@@ -15,7 +15,7 @@ const navLinks = [
   {
     id: 1,
     name: 'Workshops',
-    path: '#',
+    path: '/workshops',
   },
 
   {

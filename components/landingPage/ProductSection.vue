@@ -61,7 +61,7 @@ const products = [
     id: 7,
     name: 'Preview Docs',
     icon: 'https://api.iconify.design/vscode-icons:folder-type-docs.svg?color=%23550202',
-    image: 'https://raw.githubusercontent.com/selemondev/vscode-preview-docs/master/src/assets/images/preview-docs.png',
+    image: 'https://github.com/selemondev/vscode-preview-docs/blob/master/assets/images/preview-docs.png?raw=true',
     link: 'https://marketplace.visualstudio.com/items?itemName=Selemondev.vscode-preview-docs',
   },
 

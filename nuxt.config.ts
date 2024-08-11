@@ -13,6 +13,13 @@ export default defineNuxtConfig({
     'nuxt-aos',
   ],
 
+  routeRules: {
+    '/workshops': { prerender: true },
+    '/events': { prerender: true },
+    '/speakers': { prerender: true },
+    '/blog/**': { isr: true },
+  },
+
   extends: [
     '@nuxt-themes/elements',
     '@nuxt-themes/typography',

@@ -13,9 +13,6 @@ dateUpdated: ''
 author: 'John Philip'
 authorImg: 'https://github.com/dxphilo.png'
 ---
-## Storyblok: The Headless CMS that takes your content to the next level :sparkles:
-
-In the digital age, businesses encounter numerous difficulties when it comes to creating and delivering content that resonates with their audience. Traditional CMS ( Content management systems ) can be inflexible to use, which can result in reduced productivity, lower engagement rates, and decreased customer satisfaction.
 
 ### Accessing component properties in Vuejs 2 (Options API)
 

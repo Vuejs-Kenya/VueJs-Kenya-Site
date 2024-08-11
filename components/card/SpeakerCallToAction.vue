@@ -20,7 +20,9 @@ import ButtonCustomComponent from '../button/CustomComponent.vue'
             <h2 class="text-2xl text-center font-semibold dark:text-white">
               Become the next VueJs Kenya <span class="text-green-500 "> <br> Speaker</span>
             </h2>
-            <ButtonCustomComponent :loading="false" label="Become a speaker" />
+            <NuxtLink to="https://chat.whatsapp.com/IAOow4YR4FLCldG780WXlw" external target="_blank">
+              <ButtonCustomComponent :loading="false" label="Become a speaker" />
+            </NuxtLink>
           </div>
         </div>
 

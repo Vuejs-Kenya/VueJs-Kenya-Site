@@ -21,7 +21,7 @@ const navLinks = [
   {
     id: 2,
     name: 'Events',
-    path: '#',
+    path: '/events',
   },
 
   {

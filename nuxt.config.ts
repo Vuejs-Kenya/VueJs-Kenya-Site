@@ -40,6 +40,61 @@ export default defineNuxtConfig({
     },
   },
 
+  app: {
+    head: {
+      title: 'VueJs Kenya',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'title', hid: 'title', content: 'VueJs Kenya' },
+        {
+          name: 'description',
+          hid: 'description',
+          content: `Welcome to Kenya's Vue.js community! We're a dynamic group of developers, designers, and tech enthusiasts who share a passion for building.`,
+        },
+        {
+          name: 'keywords',
+          content: 'Vue 3, community, Nuxt, Vite, Vue, Nuxt 3, Pinia, State management, VSCode, code, programming, figma, design, prototype, learn, Rollup, Rolldown, CLI, NPM',
+        },
+        { name: 'language', content: 'English' },
+        {
+          name: 'og:title',
+          content: 'VueJs Kenya',
+        },
+        {
+          name: 'og:description',
+          content: `Welcome to Kenya's Vue.js community! We're a dynamic group of developers, designers, and tech enthusiasts who share a passion for building.`,
+        },
+        {
+          name: 'og:url',
+          content: '/',
+        },
+        {
+          name: 'og:image',
+          content: '/favicon.ico',
+        },
+
+        {
+          name: 'twitter:title',
+          content: 'VueJs Kenya',
+        },
+        {
+          name: 'twitter:description',
+          content: `Welcome to Kenya's Vue.js community! We're a dynamic group of developers, designers, and tech enthusiasts who share a passion for building.`,
+        },
+        {
+          name: 'twitter:url',
+          content: '/',
+        },
+        {
+          name: 'twitter:image',
+          content: '/favicon.ico',
+        },
+        { name: 'twitter:card', content: 'summary' },
+      ],
+    },
+  },
+
   shadcn: {
     prefix: 'UI',
     componentDir: './components/ui',

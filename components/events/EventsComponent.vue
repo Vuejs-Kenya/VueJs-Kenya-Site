@@ -287,7 +287,7 @@ const speakers = [
       >
         <div v-for="{ id, name, talk, event, imageURL, slides } in speakers" :key="id" class="h-80 flex items-center justify-center p-2">
           <div class="flex flex-col space-y-3 h-full">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 border rounded-lg">
               <img :src="imageURL" :alt="talk" class="h-44 rounded-lg">
             </div>
 

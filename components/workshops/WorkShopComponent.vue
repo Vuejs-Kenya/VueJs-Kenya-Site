@@ -351,11 +351,11 @@ const youtubeVideos = [
   <main class="relative px-6 max-w-[1500px] mx-auto md:px-10 xl:px-2">
     <div class="py-10 lg:px-20 space-y-10">
       <div class="grid place-items-center gap-y-1">
-        <h1 class="dark:text-white text-black text-center text-lg md:text-2xl font-semibold">
-          Learn with Our Video Workshops
+        <h1 class="dark:text-white text-black text-center text-lg md:text-2xl lg:text-3xl font-semibold">
+          Learn With Our Workshop Videos
         </h1>
         <h4 class="dark:text-white text-black text-center max-w-lg">
-          Explore our Vue and Nuxt sessions to build your skills.
+          Enhance your skills by exploring our Vue and Nuxt sessions.
         </h4>
       </div>
 

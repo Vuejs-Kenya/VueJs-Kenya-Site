@@ -1,3 +1,4 @@
+/* eslint-disable node/prefer-global/process */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
@@ -55,9 +56,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    mailchimp_api_key: '',
-    mailchimp_server_key: '',
-    mailchimp_audience_id: '',
+    mailchimp_api_key: process.env.MAILCHIMP_API_KEY,
+    mailchimp_server_key: process.env.MAILCHIMP_API_SERVER,
+    mailchimp_audience_id: process.env.MAILCHIMP_AUDIENCE_ID,
   },
 
   tailwindcss: {

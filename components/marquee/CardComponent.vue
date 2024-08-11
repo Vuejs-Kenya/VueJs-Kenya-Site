@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/prop-name-casing -->
 <script setup lang='ts'>
 interface Events {
   id: string
@@ -13,8 +14,8 @@ const props = defineProps<{
   name: string
   avatar: string
   title: string
-  twitterURL: string
-  githubURL: string
+  twitter_url: string
+  github_url: string
   content: Content[]
 }>()
 </script>
@@ -44,7 +45,7 @@ const props = defineProps<{
 
     <div class="flex items-center space-x-3">
       <button type="button">
-        <NuxtLink :to="props.githubURL">
+        <NuxtLink :to="props.github_url">
           <Icon
             name="line-md:github"
             class="w-5 h-5 text-gray-700 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"
@@ -53,7 +54,7 @@ const props = defineProps<{
       </button>
 
       <button type="button">
-        <NuxtLink :to="props.twitterURL">
+        <NuxtLink :to="props.twitter_url">
           <Icon
             name="line-md:twitter-x"
             class="w-5 h-5 text-gray-500 transition-all duration-200 ease-in hover:text-black dark:hover:text-gray-200 dark:text-gray-500"

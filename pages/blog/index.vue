@@ -5,7 +5,7 @@ definePageMeta({
   layout: 'blog',
 })
 const { data: articles } = useAsyncData('blog', () => queryContent('/blog').only(['headline', '_path', 'date', 'description', 'author', 'imageUrl', 'authorImg', 'body']).sort({ date: -1 }).find(), {
-  transform: articles => articles.sort((a: { date: any }, b: { date: any }) => b.date - a.date),
+  transform: articles => articles.sort((a: { date: number }, b: { date: number }) => b.date - a.date),
 })
 </script>
 

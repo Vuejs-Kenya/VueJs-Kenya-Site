@@ -4,4 +4,4 @@
 
 </div>
 
-![VueJs Kenya Site](https://raw.githubusercontent.com/Vuejs-Kenya/VueJs-Kenya-Site/main/public/public/vuejs-kenya-site-landing-page.png)
+![VueJs Kenya Site](https://raw.githubusercontent.com/Vuejs-Kenya/VueJs-Kenya-Site/main/public/vuejs-kenya-site-landing-page.png)
